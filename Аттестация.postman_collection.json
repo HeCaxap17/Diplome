@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "f29e8f70-ffa6-4669-9219-d9ab22fa7717",
+		"name": "Аттестация Copy",
+		"description": "Working with the GitHub issues API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25069942"
+	},
+	"item": [
+		{
+			"name": "Получите список issues.",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"description": "Is used to set specified media type",
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"type": "text",
+						"value": "API-Evangelist-Network"
+					},
+					{
+						"key": "Authorization",
+						"value": "token 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",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/repos/:owner/:repo/issues?access_token=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&labels=&filter=all&state=open&sort=created&direction=asc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						":owner",
+						":repo",
+						"issues"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "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"
+						},
+						{
+							"key": "labels",
+							"value": ""
+						},
+						{
+							"key": "filter",
+							"value": "all",
+							"description": "assigned, created, mentioned, subscribed, all"
+						},
+						{
+							"key": "state",
+							"value": "open",
+							"description": "open, closed, all"
+						},
+						{
+							"key": "sort",
+							"value": "created",
+							"description": "created, updated, comments"
+						},
+						{
+							"key": "direction",
+							"value": "asc",
+							"description": "asc, desc"
+						},
+						{
+							"key": "since",
+							"value": "",
+							"description": "YYYY-MM-DDTHH:MM:SSZ",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "owner",
+							"value": "HeCaxap17"
+						},
+						{
+							"key": "repo",
+							"value": "Diplome"
+						}
+					]
+				},
+				"description": "Adds an issue."
+			},
+			"response": [
+				{
+					"name": "Response_200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Is used to set specified media type",
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"type": "text",
+								"value": "API-Evangelist-Network"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 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",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/repos/:owner/:repo/issues?access_token=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&labels=&filter=all&state=open&sort=created&direction=asc",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								":owner",
+								":repo",
+								"issues"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "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"
+								},
+								{
+									"key": "labels",
+									"value": ""
+								},
+								{
+									"key": "filter",
+									"value": "all",
+									"description": "assigned, created, mentioned, subscribed, all"
+								},
+								{
+									"key": "state",
+									"value": "open",
+									"description": "open, closed, all"
+								},
+								{
+									"key": "sort",
+									"value": "created",
+									"description": "created, updated, comments"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc, desc"
+								},
+								{
+									"key": "since",
+									"value": "",
+									"description": "YYYY-MM-DDTHH:MM:SSZ",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "owner",
+									"value": "HeCaxap17"
+								},
+								{
+									"key": "repo",
+									"value": "Portfolio"
+								}
+							]
+						},
+						"description": "Adds an issue."
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Удаление Issue 2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"description": "Is used to set specified media type",
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"type": "text",
+						"value": "API-Evangelist-Network"
+					},
+					{
+						"key": "Authorization",
+						"value": "token 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",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/repos/{HeCaxap17}/{Diplome}/issues/{Issue2}/lock",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"{HeCaxap17}",
+						"{Diplome}",
+						"issues",
+						"{Issue2}",
+						"lock"
+					],
+					"query": [
+						{
+							"key": "since",
+							"value": "",
+							"description": "YYYY-MM-DDTHH:MM:SSZ",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Adds an issue."
+			},
+			"response": [
+				{
+					"name": "Response_200",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "Is used to set specified media type",
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"type": "text",
+								"value": "API-Evangelist-Network"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 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",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/user/repos?access_token=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",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "",
+									"description": "YYYY-MM-DDTHH:MM:SSZ",
+									"disabled": true
+								},
+								{
+									"key": "access_token",
+									"value": "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"
+								}
+							]
+						},
+						"description": "Adds an issue."
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
